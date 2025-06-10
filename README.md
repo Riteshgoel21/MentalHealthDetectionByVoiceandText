@@ -65,20 +65,15 @@ MindSense is a full-stack, production-ready AI application designed to detect ea
 ---
 
 ## 🚀 Getting Started
-### 1. Clone the Repository
-```bash
-git clone https://github.com/yourusername/mindsense.git
-cd mindsense
 
-
-Create a Virtual Environment
+# Create a Virtual Environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-Install Dependencies
+# Install Dependencies
 pip install -r requirements.txt
 
-4. Run the App (Streamlit version)
+# Run the App (Streamlit version)
 streamlit run app.py
 For Flask + React setup, refer to the frontend/README.md and backend/README.md inside the respective folders.
 
