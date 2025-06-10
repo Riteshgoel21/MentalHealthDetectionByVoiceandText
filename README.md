@@ -1,1 +1,108 @@
-MentalHealthDetectionByVoiceandText
+# MentalHealthDetectionByVoiceandText
+
+
+# 🧠 MindSense
+
+**AI-powered mental health insight through voice and text analysis**
+
+MindSense is a full-stack, production-ready AI application designed to detect early signs of depression, anxiety, or other emotional distress using **multimodal analysis** of both voice and text inputs. This tool empowers users with real-time feedback on their emotional state, promoting early awareness and well-being.
+
+---
+
+## 🌟 Features
+
+### 🎙 Voice Analysis Module
+- Accepts `.wav` files or real-time microphone input.
+- Uses `librosa` for audio feature extraction: MFCC, chroma, spectral contrast.
+- Integrates a pre-trained CNN/LSTM-based audio emotion classifier.
+- Displays probabilities for emotional states: Happy, Sad, Angry, Neutral.
+
+### 📝 Text Emotion & Sentiment Module
+- Accepts typed or pasted text.
+- Uses transformer-based NLP models (e.g., BERT fine-tuned on GoEmotions or DAIC-WOZ).
+- Detects emotional tones and mental health risk indicators.
+- Visualizes emotion output using radar or bar charts.
+
+### 🔁 Multimodal Fusion Layer
+- Combines voice and text predictions to form a unified emotional profile.
+- Detects conflicting signals (e.g., anxious voice with calm text).
+- Generates a mental health risk score and visual alerts if thresholds are exceeded.
+
+### 📊 Interactive Dashboard
+- Built using **Streamlit** (or Flask backend + React frontend).
+- Features a calming pastel UI/UX design.
+- Displays:
+  - Real-time feedback
+  - Historical emotional trends
+  - Emotion Diary
+  - Safe, empathetic encouragement messages
+
+### 🔐 Privacy & Security
+- Local-first data processing with optional opt-in data sharing.
+- AES-encrypted storage for any saved data.
+- Disclaimers included: *This is not a diagnostic tool.*
+
+### 🧠 Optional Enhancements
+- Empathetic AI chatbot for conversations.
+- Panic mode with emergency helplines and calming exercises.
+- Auth system for personalized emotion tracking.
+
+---
+
+## 🛠 Tech Stack
+
+| Layer        | Tools Used |
+|--------------|-------------|
+| **Backend**  | Python, FastAPI / Flask |
+| **Frontend** | Streamlit / React.js |
+| **AI/ML**    | `transformers`, `librosa`, `scikit-learn`, Hugging Face models |
+| **Visualization** | `matplotlib`, `plotly`, `seaborn` |
+| **Storage**  | SQLite or Firebase |
+| **Audio**    | `pyaudio`, `soundfile` |
+| **Containerization** | Docker |
+| **Security** | AES encryption |
+
+---
+
+## 🚀 Getting Started
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/mindsense.git
+cd mindsense
+
+
+Create a Virtual Environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+Install Dependencies
+pip install -r requirements.txt
+
+4. Run the App (Streamlit version)
+streamlit run app.py
+For Flask + React setup, refer to the frontend/README.md and backend/README.md inside the respective folders.
+
+# 📸 Screenshots
+![image](https://github.com/user-attachments/assets/e40a2079-44f5-42a3-972b-ebfadecacff3)
+![image](https://github.com/user-attachments/assets/5feb740c-b322-4d41-a11e-5f7f7be56f0d)
+
+
+
+# 📦 Docker Support
+To build and run the app with Docker:
+docker build -t mindsense-app .
+docker run -p 8501:8501 mindsense-app
+
+# 📘 Datasets Used
+
+GoEmotions by Google
+DAIC-WOZ
+RAVDESS or similar emotional audio datasets
+
+# ⚠️ Disclaimer
+MindSense is not a medical diagnostic tool. It is meant for early emotional awareness and support. Always consult a professional for clinical advice.
+
+
+
+
+
